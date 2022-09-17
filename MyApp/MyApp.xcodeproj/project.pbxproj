@@ -18,6 +18,9 @@
 		552D08A928D5A84600482025 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D08A828D5A84600482025 /* URLRequest+Extensions.swift */; };
 		552D08AC28D5B06100482025 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D08AB28D5B06100482025 /* ArticleViewModel.swift */; };
 		552D08AF28D5B75100482025 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D08AE28D5B75100482025 /* ArticleTableViewCell.swift */; };
+		552D08B128D5C9B700482025 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D08B028D5C9B700482025 /* FirstViewController.swift */; };
+		552D08B328D5CA2E00482025 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D08B228D5CA2E00482025 /* SecondViewController.swift */; };
+		552D08B528D5CA5E00482025 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D08B428D5CA5E00482025 /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		552D08A828D5A84600482025 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
 		552D08AB28D5B06100482025 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		552D08AE28D5B75100482025 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		552D08B028D5C9B700482025 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		552D08B228D5CA2E00482025 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		552D08B428D5CA5E00482025 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		86E8F20980845B19DDB504C1 /* Pods-MyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.release.xcconfig"; path = "Target Support Files/Pods-MyApp/Pods-MyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				552D08A228D58EDE00482025 /* NewsTableViewController.swift */,
+				552D08B028D5C9B700482025 /* FirstViewController.swift */,
+				552D08B228D5CA2E00482025 /* SecondViewController.swift */,
+				552D08B428D5CA5E00482025 /* MainTabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -260,8 +269,11 @@
 			files = (
 				552D08A628D5914C00482025 /* Article.swift in Sources */,
 				552D088E28D58C9700482025 /* AppDelegate.swift in Sources */,
+				552D08B528D5CA5E00482025 /* MainTabBarController.swift in Sources */,
 				552D089028D58C9700482025 /* SceneDelegate.swift in Sources */,
+				552D08B328D5CA2E00482025 /* SecondViewController.swift in Sources */,
 				552D08A928D5A84600482025 /* URLRequest+Extensions.swift in Sources */,
+				552D08B128D5C9B700482025 /* FirstViewController.swift in Sources */,
 				552D08A328D58EDE00482025 /* NewsTableViewController.swift in Sources */,
 				552D08AF28D5B75100482025 /* ArticleTableViewCell.swift in Sources */,
 				552D08AC28D5B06100482025 /* ArticleViewModel.swift in Sources */,
