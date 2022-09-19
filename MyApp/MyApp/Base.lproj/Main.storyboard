@@ -132,18 +132,60 @@
         <!--Item-->
         <scene sceneID="xrw-v0-Lsf">
             <objects>
-                <viewController id="tEc-Cm-QuM" sceneMemberID="viewController">
+                <viewController id="tEc-Cm-QuM" customClass="WeatherViewController" customModule="MyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8De-bM-fN2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYJ-Ye-KSx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Weather Report" id="mxe-aO-Fam"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRu-Eo-AFf">
+                                <rect key="frame" x="107" y="154" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="7ww-wv-grj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="気温" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Yd-3x-jVY">
+                                <rect key="frame" x="170.5" y="426.5" width="73" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="湿度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2f-rx-ZJ0">
+                                <rect key="frame" x="180.5" y="518" width="53" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Zam-wq-VDy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dRu-Eo-AFf" firstAttribute="centerX" secondItem="8De-bM-fN2" secondAttribute="centerX" id="3L4-5j-MpN"/>
+                            <constraint firstItem="8Yd-3x-jVY" firstAttribute="centerY" secondItem="8De-bM-fN2" secondAttribute="centerY" id="Kb9-Z0-ylh"/>
+                            <constraint firstItem="M2f-rx-ZJ0" firstAttribute="top" secondItem="8Yd-3x-jVY" secondAttribute="bottom" constant="48.5" id="MlD-UV-f2b"/>
+                            <constraint firstItem="dRu-Eo-AFf" firstAttribute="top" secondItem="Zam-wq-VDy" secondAttribute="top" constant="110" id="Rnc-HD-S6x"/>
+                            <constraint firstItem="8Yd-3x-jVY" firstAttribute="centerX" secondItem="8De-bM-fN2" secondAttribute="centerX" id="SZO-C2-hfL"/>
+                            <constraint firstItem="M2f-rx-ZJ0" firstAttribute="centerX" secondItem="8De-bM-fN2" secondAttribute="centerX" id="dUn-ok-Y3s"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="q2n-Er-7PS"/>
+                    <connections>
+                        <outlet property="cityNameTextField" destination="dRu-Eo-AFf" id="Vym-dP-Siz"/>
+                        <outlet property="humidityLabel" destination="M2f-rx-ZJ0" id="p4V-eP-cjn"/>
+                        <outlet property="temperatureLabel" destination="8Yd-3x-jVY" id="BGW-hZ-qVb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1w-DM-HuH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="951" y="2495"/>
+            <point key="canvasLocation" x="950.72463768115949" y="2494.4196428571427"/>
         </scene>
         <!--Item-->
         <scene sceneID="rfE-d4-nla">
