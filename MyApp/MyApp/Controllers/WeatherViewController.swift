@@ -21,6 +21,7 @@ class WeatherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         
         self.cityNameTextField.rx.controlEvent(.editingDidEndOnExit)
             .asObservable()
