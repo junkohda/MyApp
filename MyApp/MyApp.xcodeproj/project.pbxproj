@@ -21,6 +21,10 @@
 		552D08B728D5D2C400482025 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D08B628D5D2C400482025 /* AddTaskViewController.swift */; };
 		552D08B928D5D2CB00482025 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D08B828D5D2CB00482025 /* TaskListViewController.swift */; };
 		552D08BB28D5D38600482025 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D08BA28D5D38600482025 /* Task.swift */; };
+		552D08BD28D7407E00482025 /* CameraFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D08BC28D7407E00482025 /* CameraFilterViewController.swift */; };
+		552D08BF28D740D100482025 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D08BE28D740D100482025 /* PhotosCollectionViewController.swift */; };
+		552D08C128D7411600482025 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D08C028D7411600482025 /* PhotoCollectionViewCell.swift */; };
+		552D08C428D7416A00482025 /* FiltersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D08C328D7416A00482025 /* FiltersService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,10 @@
 		552D08B628D5D2C400482025 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		552D08B828D5D2CB00482025 /* TaskListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		552D08BA28D5D38600482025 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		552D08BC28D7407E00482025 /* CameraFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFilterViewController.swift; sourceTree = "<group>"; };
+		552D08BE28D740D100482025 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		552D08C028D7411600482025 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		552D08C328D7416A00482025 /* FiltersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersService.swift; sourceTree = "<group>"; };
 		86E8F20980845B19DDB504C1 /* Pods-MyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.release.xcconfig"; path = "Target Support Files/Pods-MyApp/Pods-MyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +85,7 @@
 		552D088C28D58C9700482025 /* MyApp */ = {
 			isa = PBXGroup;
 			children = (
+				552D08C228D7415000482025 /* Service */,
 				552D08AD28D5B71900482025 /* Cells */,
 				552D08AA28D5B03900482025 /* ViewModels */,
 				552D08A728D5A7AC00482025 /* Extension */,
@@ -98,6 +107,8 @@
 				552D08B828D5D2CB00482025 /* TaskListViewController.swift */,
 				552D08B628D5D2C400482025 /* AddTaskViewController.swift */,
 				552D08A228D58EDE00482025 /* NewsTableViewController.swift */,
+				552D08BC28D7407E00482025 /* CameraFilterViewController.swift */,
+				552D08BE28D740D100482025 /* PhotosCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -131,8 +142,17 @@
 			isa = PBXGroup;
 			children = (
 				552D08AE28D5B75100482025 /* ArticleTableViewCell.swift */,
+				552D08C028D7411600482025 /* PhotoCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		552D08C228D7415000482025 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				552D08C328D7416A00482025 /* FiltersService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		5AD2F50E8BEB7C369301E313 /* Pods */ = {
@@ -267,10 +287,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				552D08BD28D7407E00482025 /* CameraFilterViewController.swift in Sources */,
+				552D08C128D7411600482025 /* PhotoCollectionViewCell.swift in Sources */,
 				552D08A628D5914C00482025 /* Article.swift in Sources */,
 				552D08B728D5D2C400482025 /* AddTaskViewController.swift in Sources */,
+				552D08BF28D740D100482025 /* PhotosCollectionViewController.swift in Sources */,
 				552D08BB28D5D38600482025 /* Task.swift in Sources */,
 				552D088E28D58C9700482025 /* AppDelegate.swift in Sources */,
+				552D08C428D7416A00482025 /* FiltersService.swift in Sources */,
 				552D089028D58C9700482025 /* SceneDelegate.swift in Sources */,
 				552D08A928D5A84600482025 /* URLRequest+Extensions.swift in Sources */,
 				552D08B928D5D2CB00482025 /* TaskListViewController.swift in Sources */,

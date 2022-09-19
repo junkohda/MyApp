@@ -23,6 +23,10 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        
+        
+        
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
