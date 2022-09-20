@@ -67,7 +67,14 @@ class NewsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // タップされたセルの行番号を出力
+        // タップされたニュースを開く
         let articleVM = self.articleListVM.articleAt(indexPath.row)
+        let url = URL(string: articleVM.article.url)!
+        
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
     }
 }
