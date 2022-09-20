@@ -61,7 +61,13 @@
                             <outlet property="delegate" destination="yUx-og-ELp" id="Suc-eD-NQO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="NewsApp" id="DjL-lj-inu"/>
+                    <navigationItem key="navigationItem" title="NewsApp" id="DjL-lj-inu">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="Onc-Yg-tl8">
+                            <connections>
+                                <action selector="refleshButtonPressed" destination="yUx-og-ELp" id="ObO-FG-6uM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70r-7c-RaI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dZ-HY-cX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1861" y="1840"/>
+            <point key="canvasLocation" x="1861" y="2663"/>
         </scene>
         <!--Weather Report-->
         <scene sceneID="xrw-v0-Lsf">
@@ -186,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1w-DM-HuH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1859" y="2637"/>
+            <point key="canvasLocation" x="1861" y="1829"/>
         </scene>
         <!--ToDoList-->
         <scene sceneID="rfE-d4-nla">
@@ -369,7 +375,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7KO-qa-R64" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3787" y="1840"/>
+            <point key="canvasLocation" x="3787" y="2663"/>
         </scene>
         <!--NEWS-->
         <scene sceneID="yZq-T7-mNe">
@@ -446,7 +452,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2c-AY-xdv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2822" y="1840"/>
+            <point key="canvasLocation" x="2822" y="2663"/>
         </scene>
         <!--TODO-->
         <scene sceneID="4OI-DS-IwQ">
@@ -484,7 +490,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KFr-tU-PPU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="951" y="1840"/>
+            <point key="canvasLocation" x="951" y="2663"/>
         </scene>
         <!--WEATHER-->
         <scene sceneID="7Gi-Em-JRe">
@@ -503,7 +509,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="av7-DV-bjV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="951" y="2637"/>
+            <point key="canvasLocation" x="951" y="1829"/>
         </scene>
     </scenes>
     <resources>

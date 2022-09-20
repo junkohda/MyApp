@@ -14,6 +14,10 @@ class NewsTableViewController: UITableViewController {
     let disposeBag = DisposeBag()
     private var articleListVM: ArticleListViewModel!
     
+    @IBAction func refleshButtonPressed() {
+        self.populateNews()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +35,7 @@ class NewsTableViewController: UITableViewController {
     }
     
     private func populateNews() {
-        let resource = Resource<ArticleResponse>(url: URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=5520b28519a845e8bc84964b64752f9c")!)
+        let resource = Resource<ArticleResponse>(url: URL(string: ConstStruct.newsURL)!)
     
         URLRequest.load(resource: resource)
             .subscribe(onNext:{ articleResponse in
@@ -60,5 +64,10 @@ class NewsTableViewController: UITableViewController {
             .disposed(by: disposeBag)
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // タップされたセルの行番号を出力
+        let articleVM = self.articleListVM.articleAt(indexPath.row)
     }
 }

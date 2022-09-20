@@ -27,6 +27,7 @@
 		552D08C428D7416A00482025 /* FiltersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D08C328D7416A00482025 /* FiltersService.swift */; };
 		55E9890B28D864F200BC9CCF /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E9890A28D864F200BC9CCF /* WeatherViewController.swift */; };
 		55E9890D28D865B300BC9CCF /* WeatherResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E9890C28D865B300BC9CCF /* WeatherResult.swift */; };
+		55E9891028D93F2C00BC9CCF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E9890F28D93F2C00BC9CCF /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		552D08C328D7416A00482025 /* FiltersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersService.swift; sourceTree = "<group>"; };
 		55E9890A28D864F200BC9CCF /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		55E9890C28D865B300BC9CCF /* WeatherResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResult.swift; sourceTree = "<group>"; };
+		55E9890F28D93F2C00BC9CCF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		86E8F20980845B19DDB504C1 /* Pods-MyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.release.xcconfig"; path = "Target Support Files/Pods-MyApp/Pods-MyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 		552D088C28D58C9700482025 /* MyApp */ = {
 			isa = PBXGroup;
 			children = (
+				55E9890E28D93F0300BC9CCF /* Property */,
 				552D08C228D7415000482025 /* Service */,
 				552D08AD28D5B71900482025 /* Cells */,
 				552D08AA28D5B03900482025 /* ViewModels */,
@@ -159,6 +162,14 @@
 				552D08C328D7416A00482025 /* FiltersService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		55E9890E28D93F0300BC9CCF /* Property */ = {
+			isa = PBXGroup;
+			children = (
+				55E9890F28D93F2C00BC9CCF /* Constant.swift */,
+			);
+			path = Property;
 			sourceTree = "<group>";
 		};
 		5AD2F50E8BEB7C369301E313 /* Pods */ = {
@@ -294,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				552D08BD28D7407E00482025 /* CameraFilterViewController.swift in Sources */,
+				55E9891028D93F2C00BC9CCF /* Constant.swift in Sources */,
 				55E9890D28D865B300BC9CCF /* WeatherResult.swift in Sources */,
 				552D08C128D7411600482025 /* PhotoCollectionViewCell.swift in Sources */,
 				552D08A628D5914C00482025 /* Article.swift in Sources */,

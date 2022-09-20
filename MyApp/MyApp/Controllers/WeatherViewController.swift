@@ -41,7 +41,9 @@ class WeatherViewController: UIViewController {
         if let weather = weather {
             self.temperatureLabel.text = "\(weather.temp)度"
             self.humidityLabel.text = "\(weather.humidity)%"
-        } else {
+        } else {            let alert = UIAlertController(title: "エラー", message: "エラーが発生しました", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true, completion: nil)
             self.temperatureLabel.text = "温度"
             self.humidityLabel.text = "湿度"
         }
@@ -49,13 +51,17 @@ class WeatherViewController: UIViewController {
     
     private func fetchWeather(by city: String) {
         
-        let resource = Resource<WeatherResult>(url: URL(string: "http://api.openweathermap.org/data/2.5/weather?q=\(city)&units=metric&APPID=57bdda37dd22bfd7dbc199ac48b5a2d9")!)
+        let resource = Resource<WeatherResult>(url: URL(string: ConstStruct.weatherURL1+city+ConstStruct.weatherURL2)!)
 
         let search = URLRequest.load(resource: resource)
             .observeOn(MainScheduler.instance)
             .retry(3)
-            .catchError { error in
+            .catchError { error in                
+                let alert = UIAlertController(title: "エラー", message: "都市名が不正です", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert, animated: true, completion: nil)
                 print(error.localizedDescription)
+                
                 return Observable.just(WeatherResult.empty)
             }.asDriver(onErrorJustReturn: WeatherResult.empty)
         

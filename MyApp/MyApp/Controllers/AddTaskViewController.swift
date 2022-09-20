@@ -28,6 +28,12 @@ class AddTaskViewController: UIViewController {
             return
         }
         
+        //タスクタイトル未入力時は、タスクを追加せずに閉じる
+        if title == "" {
+            self.dismiss(animated: true, completion: nil)
+            return
+        }
+        
         let task = Task(title: title, priority: priority)
         taskSubject.onNext(task)
         
