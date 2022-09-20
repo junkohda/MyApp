@@ -127,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dZ-HY-cX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1861" y="2823"/>
+            <point key="canvasLocation" x="1861" y="1840"/>
         </scene>
         <!--Weather Report-->
         <scene sceneID="xrw-v0-Lsf">
@@ -146,6 +146,7 @@
                             </navigationBar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRu-Eo-AFf">
                                 <rect key="frame" x="107" y="198" width="200" height="34"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="7ww-wv-grj"/>
                                 </constraints>
@@ -185,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1w-DM-HuH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1861" y="1927"/>
+            <point key="canvasLocation" x="1859" y="2637"/>
         </scene>
         <!--ToDoList-->
         <scene sceneID="rfE-d4-nla">
@@ -195,21 +196,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NOd-5C-Kqt">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="ToDoList" id="ol7-aQ-XXR">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="U27-vH-CuR">
-                                            <connections>
-                                                <segue destination="9zl-p2-diW" kind="presentation" id="HgC-hP-feU"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zx4-ao-wpa">
-                                <rect key="frame" x="81" y="160" width="252" height="32"/>
+                                <rect key="frame" x="81" y="189" width="252" height="32"/>
                                 <segments>
                                     <segment title="All"/>
                                     <segment title="High"/>
@@ -221,7 +209,7 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7sA-88-PHE">
-                                <rect key="frame" x="0.0" y="199" width="414" height="614"/>
+                                <rect key="frame" x="0.0" y="262" width="414" height="551"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TaskTableViewCell" id="qdo-Gn-gC7">
@@ -238,17 +226,32 @@
                                     <outlet property="delegate" destination="e7k-zK-Tan" id="pI5-h8-GkV"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HSG-n1-TIh">
+                                <rect key="frame" x="0.0" y="145" width="414" height="44"/>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PE9-m6-C1t">
+                                <rect key="frame" x="341" y="189" width="55" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add"/>
+                                <connections>
+                                    <segue destination="9zl-p2-diW" kind="show" id="MUC-aF-ihq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g3L-NK-aa7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zx4-ao-wpa" firstAttribute="centerX" secondItem="l1l-DK-9eR" secondAttribute="centerX" id="2vN-Ei-OmS"/>
+                            <constraint firstItem="zx4-ao-wpa" firstAttribute="centerX" secondItem="HSG-n1-TIh" secondAttribute="centerX" id="6OZ-y7-qSZ"/>
                             <constraint firstItem="7sA-88-PHE" firstAttribute="leading" secondItem="g3L-NK-aa7" secondAttribute="leading" id="9sp-Nj-jxw"/>
-                            <constraint firstItem="g3L-NK-aa7" firstAttribute="trailing" secondItem="zx4-ao-wpa" secondAttribute="trailing" constant="81" id="E2d-rB-ol5"/>
                             <constraint firstItem="g3L-NK-aa7" firstAttribute="bottom" secondItem="7sA-88-PHE" secondAttribute="bottom" id="EJ8-Fa-N2y"/>
-                            <constraint firstItem="zx4-ao-wpa" firstAttribute="top" secondItem="g3L-NK-aa7" secondAttribute="top" constant="72" id="I4p-DI-Rcv"/>
+                            <constraint firstItem="zx4-ao-wpa" firstAttribute="centerX" secondItem="7sA-88-PHE" secondAttribute="centerX" id="LYv-98-YVF"/>
+                            <constraint firstItem="7sA-88-PHE" firstAttribute="top" secondItem="zx4-ao-wpa" secondAttribute="bottom" constant="42" id="Px2-V0-26J"/>
                             <constraint firstItem="g3L-NK-aa7" firstAttribute="trailing" secondItem="7sA-88-PHE" secondAttribute="trailing" id="RRF-lA-wUu"/>
-                            <constraint firstItem="7sA-88-PHE" firstAttribute="top" secondItem="zx4-ao-wpa" secondAttribute="bottom" constant="8" symbolic="YES" id="dHG-DO-eQx"/>
+                            <constraint firstItem="zx4-ao-wpa" firstAttribute="leading" secondItem="g3L-NK-aa7" secondAttribute="leading" constant="81" id="bNk-6H-rtU"/>
+                            <constraint firstItem="zx4-ao-wpa" firstAttribute="top" secondItem="l1l-DK-9eR" secondAttribute="top" constant="189" id="bRR-qy-08N"/>
+                            <constraint firstItem="HSG-n1-TIh" firstAttribute="leading" secondItem="7sA-88-PHE" secondAttribute="leading" id="kI3-gE-qgx"/>
+                            <constraint firstItem="zx4-ao-wpa" firstAttribute="top" secondItem="HSG-n1-TIh" secondAttribute="bottom" id="mVz-zC-22j"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ToDoList" id="6gP-VF-obt"/>
@@ -266,17 +269,17 @@
             <objects>
                 <viewController id="NVR-Fi-OD9" customClass="AddTaskViewController" customModule="MyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XzK-65-9US">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xyf-5s-nqA">
-                                <rect key="frame" x="0.0" y="12" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="-5" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Add Task" id="EBS-5a-ZDM"/>
                                 </items>
                             </navigationBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MXy-CM-rZv">
-                                <rect key="frame" x="113" y="86" width="188" height="32"/>
+                                <rect key="frame" x="113" y="57" width="188" height="32"/>
                                 <segments>
                                     <segment title="High"/>
                                     <segment title="Medium"/>
@@ -284,8 +287,8 @@
                                 </segments>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kIQ-eK-P5O">
-                                <rect key="frame" x="107" y="404" width="200" height="34"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="107" y="431" width="200" height="34"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="WSB-T8-L59"/>
                                 </constraints>
@@ -366,14 +369,14 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7KO-qa-R64" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3787" y="2823"/>
+            <point key="canvasLocation" x="3787" y="1840"/>
         </scene>
         <!--NEWS-->
         <scene sceneID="yZq-T7-mNe">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qpp-eC-KKN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lJ0-SD-vDu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="NEWS" id="dWG-uq-4BL"/>
+                    <tabBarItem key="tabBarItem" title="NEWS" image="globe" catalog="system" id="dWG-uq-4BL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vbI-UA-g5T">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -413,8 +416,9 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9zl-p2-diW" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="rbR-Pa-SZu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lym-2d-KQf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -442,13 +446,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2c-AY-xdv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2822" y="2823"/>
+            <point key="canvasLocation" x="2822" y="1840"/>
         </scene>
         <!--TODO-->
         <scene sceneID="4OI-DS-IwQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gCG-cz-fRw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="TODO" id="Zow-bX-xdz"/>
+                    <tabBarItem key="tabBarItem" title="TODO" image="list.bullet" catalog="system" id="Zow-bX-xdz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7ef-xW-ccD">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -467,7 +471,7 @@
         <scene sceneID="nUc-zr-0f4">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qTj-fG-TQw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="CAMERA" id="dZv-Yq-cZa"/>
+                    <tabBarItem key="tabBarItem" title="CAMERA" image="arrow.triangle.2.circlepath.camera" catalog="system" id="dZv-Yq-cZa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uBn-Xz-fWZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -480,13 +484,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KFr-tU-PPU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="951" y="2823"/>
+            <point key="canvasLocation" x="951" y="1840"/>
         </scene>
         <!--WEATHER-->
         <scene sceneID="7Gi-Em-JRe">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8xY-bl-55E" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="WEATHER" id="q2n-Er-7PS"/>
+                    <tabBarItem key="tabBarItem" title="WEATHER" image="cloud.rain" catalog="system" id="q2n-Er-7PS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yhI-xg-t6t">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -499,12 +503,19 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="av7-DV-bjV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="951" y="1927"/>
+            <point key="canvasLocation" x="951" y="2637"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.triangle.2.circlepath.camera" catalog="system" width="32" height="32"/>
+        <image name="cloud.rain" catalog="system" width="32" height="32"/>
+        <image name="globe" catalog="system" width="32" height="32"/>
+        <image name="list.bullet" catalog="system" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
