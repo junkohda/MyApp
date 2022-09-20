@@ -13,6 +13,7 @@ class NewsTableViewController: UITableViewController {
     
     let disposeBag = DisposeBag()
     private var articleListVM: ArticleListViewModel!
+    private var articleImageListVM: ArticleImageListViewModel!
     
     @IBAction func refleshButtonPressed() {
         self.populateNews()
@@ -49,6 +50,21 @@ class NewsTableViewController: UITableViewController {
     
     }
     
+    private func getImage(_ url:Observable<String>) {
+        let resource = Resource<ArticleImageResponse>(url: URL(string: url)!)
+    
+        URLRequest.load(resource: resource)
+            .subscribe(onNext:{ articleImageResponse in
+                
+                let articleImages = articleImageResponse.articleImages
+                self.articleImageListVM = ArticleImageListViewModel(articleImages)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }).disposed(by: disposeBag)
+    
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleTableViewCell" ,for: indexPath) as? ArticleTableViewCell else {
             fatalError("ArticleTableViewCell is not found")
@@ -63,6 +79,8 @@ class NewsTableViewController: UITableViewController {
             .drive(cell.descriptionLabel.rx.text)
             .disposed(by: disposeBag)
         
+        self.getImage(articleVM.urlToImage)
+    
         return cell
     }
     

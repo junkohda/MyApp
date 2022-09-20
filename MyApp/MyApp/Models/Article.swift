@@ -18,3 +18,11 @@ struct Article: Decodable{
     let urlToImage: String?
 }
 
+
+struct ArticleImageResponse: Decodable {
+    let articleImages: [ArticleImage]
+}
+
+struct ArticleImage: Decodable{
+    let image: Data?
+}
